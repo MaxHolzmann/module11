@@ -39,7 +39,7 @@ app.use(express.static('public'));
 app.get('/api/notes', (req, res) => res.json(notes))
 
 app.post('/api/notes', (req, res) => {
-  console.log('hey, saveNote function is working a bit!')
+  console.log(JSON.stringify(req.body))
 })
 
 app.get('/notes', (req, res) => {
