@@ -38,6 +38,10 @@ app.use(express.static('public'));
 
 app.get('/api/notes', (req, res) => res.json(notes))
 
+app.post('/api/notes', (req, res) => {
+  console.log('hey, saveNote function is working a bit!')
+})
+
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/notes.html'));
   });
@@ -45,5 +49,29 @@ app.get('/notes', (req, res) => {
 app.listen(PORT, () =>
   console.log(`Serving static asset routes on port ${PORT}!`)
 );
+
+/* 
+
+  app.post('/api/tips', (req, res) => {
+  console.info(`${req.method} request received to add a tip`);
+
+  const { username, topic, tip } = req.body;
+
+  if (req.body) {
+    const newTip = {
+      username,
+      tip,
+      topic,
+      tip_id: uuid(),
+    };
+
+    readAndAppend(newTip, './db/tips.json');
+    res.json(`Tip added successfully 🚀`);
+  } else {
+    res.error('Error in adding tip');
+  }
+});
+
+*/
 
 
