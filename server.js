@@ -34,12 +34,15 @@ const app = express();
 const PORT = 3001;
 const path = require('path');
 
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true }))
+
 app.use(express.static('public'));
 
 app.get('/api/notes', (req, res) => res.json(notes))
 
 app.post('/api/notes', (req, res) => {
-  console.log(JSON.stringify(req.body))
+  console.log(req.body)
 })
 
 app.get('/notes', (req, res) => {
