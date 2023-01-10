@@ -44,9 +44,20 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/notes.html'));
   });
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'))
+app.delete('/api/notes/:id', (req, res) => {
+  // req.params.id
+  notes.forEach((note, index) => {
+    if(req.params.id === note.id) {
+      notes.splice(index, 1)
+    }
   })
+  writeToFile("db/db.json", notes)
+})
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'))
+ })
+
 
 app.listen(PORT, () =>
   console.log(`Serving static asset routes on port ${PORT}!`)
