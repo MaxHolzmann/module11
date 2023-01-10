@@ -1,12 +1,22 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text",
-        "id":"0"
+        "title": "Test Title",
+        "text": "Test text",
+        "id": "0"
     },
     {
-        "title":"Allie is here!",
-        "text":"Allie has arrived",
-        "id":"1"
+        "title": "Allie is here!",
+        "text": "Allie has arrived",
+        "id": "1"
+    },
+    {
+        "title": "New note",
+        "text": "new note",
+        "id": "1c64eff2-600b-4e5b-8b5f-b10e3504ab8a"
+    },
+    {
+        "title": "Hello",
+        "text": "this is a new note\n",
+        "id": "098cb80e-304b-4428-96c0-61bb199113fc"
     }
 ]

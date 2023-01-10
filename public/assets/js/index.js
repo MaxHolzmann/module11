@@ -3,7 +3,9 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-const url = new URL('http://localhost:3001/api/notes')
+const url = new URL('http://localhost:3001/api/notes');
+
+
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
