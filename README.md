@@ -2,6 +2,7 @@
 
 ## Demonstration
 
+[Video Demonstration](https://youtu.be/FCAX8cUEQB0)
 
 ## Description
 Use this app to take notes throughout your day for any purpose. Save, delete and view them when you need them!
